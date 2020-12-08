@@ -72,6 +72,13 @@ load2es(es, index_name, data_path)
 ]
 ```
 
+# Execute with flask
+----
+```
+1. python3 flaskapp.py
+2. 127.0.0.1:5000 on browser
+```
+
 # reference
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-18-04 <br>
 https://elasticsearch-py.readthedocs.io/en/7.10.0/ <br>
