@@ -1,8 +1,7 @@
 # Elasticsearch with flask demo
-----
+
 
 # Install Elasticsearch
-----
 ```
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
@@ -11,7 +10,6 @@ sudo apt install elasticsearch
 ```
 
 # Setting
-----
 ```
 sudo vim /etc/elasticsearch/elasticsearch.yml
 ```
@@ -33,7 +31,6 @@ sudo service elasticsearch enable
 ```
 
 # Testing
-----
 ```
 curl -X GET 'http://localhost:9200'
 ```
@@ -58,20 +55,17 @@ Output for example
 }
 ```
 # Install Elasticsearch-py
-----
 ```
 python -m pip install elasticsearch
 ```
 
 # Load data from json array by using the script
-----
 ```
 es = Elasticsearch([{'host':'localhost', 'port':9200}])
 load2es(es, index_name, data_path)
 ```
 
 # json array for example
-----
 ```
 [{"key":"Key1", "content":"content1"},
 {"key":"Key2", "content":"content2"}
@@ -79,7 +73,6 @@ load2es(es, index_name, data_path)
 ```
 
 # reference
-----
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-18-04
 https://elasticsearch-py.readthedocs.io/en/7.10.0/
 https://soarlin.github.io/2016/11/13/elasticsearch-note-operation/#%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4
