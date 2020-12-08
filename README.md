@@ -59,7 +59,7 @@ Output for example
 python -m pip install elasticsearch
 ```
 
-# Load data from json array by using the script
+# Usage (es_test.py)
 ```
 es = Elasticsearch([{'host':'localhost', 'port':9200}])
 load2es(es, index_name, data_path)
