@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team Big Data ver.Beta</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+body{
+	min-height: 75rem;
+	padding-top: 4.5rem;
+}
+
+
+.active-pink-2 input.form-control[type=text]:focus:not([readonly]) {
+	border-bottom: 1px solid #f48fb1;
+	box-shadow: 0 1px 0 0 #f48fb1;
+}
+
+</style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<a class="navbar-brand" href="/">TeamBigData</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+</button>
+</nav>
+
+<!--
+<div class="jumbotron text-center">
+<h1>News Data Information</h1>
+<p>This is the counting list of the collecting News.</p>
+</div>
+-->
+<div class="container">
+<form class="form-inline md-form mr-auto active-pink active-pink-2 mb-3 mt-0" method="POST">
+<input class="form-control mr-sm-2" type="text" name="input" placeholder="Search" aria-label="Search" value="{{show}}">
+<button class="btn-outline-success btn-rounded btn-sm my-0" type="submit" name="button" value="search">Search</button>
+</form>
+Total <b>{{count}}</b> News in the database.
+<br>
+</div>
+
+<div class="container">
+	{{search_result | safe}}
+</div>
+
+
+</body>
