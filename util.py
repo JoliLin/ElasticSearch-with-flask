@@ -12,21 +12,6 @@ def subclass_format(dic):
 
     return output
 
-def search(es, index_name, query, size=10):
-    search_ = es.search(index=index_name, body={'query':{'match':{'title':query}}, 'size':size})
-    
-    title = []
-    content = []
-    
-    for i in search_['hits']['hits']:
-        title.append(i['_source']['title'])
-        try:
-            content.append(i['_source']['content'])
-        except KeyError:
-            content.append('')
-
-    return title, content
-
 def search_format( title, content ):
     if len(title) == 0:
         output = 'Not Found'
